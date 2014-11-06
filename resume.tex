@@ -1,0 +1,90 @@
+\documentclass[margin, 10pt]{res} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
+
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+\hypersetup{colorlinks,urlcolor=blue}
+
+% hack into hyperref
+\makeatletter
+\DeclareUrlCommand\ULurl@@{%
+  \def\UrlFont{\ttfamily\color{blue}}%
+  \def\UrlLeft{\uline\bgroup}%
+  \def\UrlRight{\egroup}}
+\def\ULurl@#1{\hyper@linkurl{\ULurl@@{#1}}{#1}}
+\DeclareRobustCommand*\ULurl{\hyper@normalise\ULurl@}
+\makeatother
+
+\setlength{\textwidth}{5.1in} % Text width of the document
+\newcommand*{\its}{\hspace{0.8cm}}
+
+\begin{document}
+
+\moveleft.5\hoffset\centerline{\Huge\bf Adil Virani}
+\bigskip
+\moveleft.5\hoffset\centerline{(214) 436-1433\its{}me@adil.pw\its{}\ULurl{http://adil.pw}\its{}linkedin.com/in/adisv9997\its{}github.com/adilvirani}
+
+\begin{resume}
+
+  \section{TECHNICAL SKILLS \\ \textnormal{(in order of proficiency)}} 
+
+  {\bf Languages:} Java, JavaScript, HTML/CSS, PHP, Python, Ruby
+
+  {\bf Technologies:} Node.js, Ionic, AngularJS, jQuery, Maven, Git, Vim, MySQL, MongoDB, \LaTeX
+
+  \section{EXPERIENCE}
+
+  {\bf Research Assistant (Computer Science)} \hfill October 2014 -- Present \\
+  University of North Texas
+
+  \begin{itemize} \itemsep -2pt
+    \item Developed Unmanned Aerial Vehicles (UAVs) that are capable of providing wireless communications to storm ravaged areas. 
+    \item Extended the Wi-Fi reach of the drones to 5 kilometers (3 miles) by designing and programming directional antennas that can rotate and adjust automatically
+  \end{itemize}
+
+  {\bf Lead Developer} \hfill August 2012 -- Present \\
+  broadlinkone
+
+  \begin{itemize} \itemsep -2pt
+    \item Fixed front-end, and back-end for the company's website, along with other branches of broadlinkone's website such as cloudworx, and other cloud assisting websites. 
+    \item Skills used: HTML, CSS, PHP, Wordpress
+  \end{itemize}
+
+  \section{PROJECTS}
+
+  \textbf{FreezeRay} \hfill November 2014
+
+  \begin{itemize} \itemsep -2pt
+    \item Created an offline bitcoin wallet, that is able to sign transactions via QR Codes
+    \item Written using Ionic, CHAIN API, and Node
+  \end{itemize}
+
+  \textbf{EnergyPal} \hfill October 2014
+
+  \begin{itemize} \itemsep -2pt
+    \item Created a grand prize winning mobile app for the NTx Apps Challenge that displays real-time energy usage data to homeowners via modified wattmeters plugged into outlets
+    \item Utilized AngularJS, Node, MongoDB, Java, Xbees, Gemalto Concept Board, and Express
+  \end{itemize}
+
+  \textbf{TripBlaze} \hfill August 2014
+
+  \begin{itemize} \itemsep -2pt
+    \item Created a grand prize winning travel app at Sabre Dev Studio designed to enable users to seamlessly plan for longer vacation trips by helping them find cheap fares, explore locales, and customize itineraries. 
+    \item Reverse engineered the Tripomatic API to get data for points of interest
+    \item Utilized AngularJS, Node, MongoDB, and Express
+  \end{itemize}
+  
+  \section{EDUCATION}
+
+  Undergraduate, Computer Science \\
+  Texas Academy of Math and Science at UNT, 2014 -- Present \textit {(expected 2016)} \\
+
+  \section{ACTIVITIES} 
+
+  \begin{itemize} \itemsep -2pt
+    \item 2014 -- Present -- \textbf{Various hackathons}, including PennApps X, NTx Apps Challenge, HackGT, and Vegas Money 20/20 
+    \item 2014 -- Present -- \textbf{Member} of TAMS Computer Science Organization
+    \item 2014 -- Present -- \textbf{Member} of TAMS Resolv Organization
+  \end{itemize}
+\end{resume}
+\end{document}
